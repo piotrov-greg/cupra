@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cupra</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/cars.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#"><img src="assets/icons/logo.png" alt="Cupra logo" /></a>
+        <ul class="navbarMenu">
+          <li><a href="#">Samochody</a></li>
+          <li><a href="#">Jazda Próbna</a></li>
+          <li><a href="#">Oferta</a></li>
+          <li><a href="#">Salon Cupra</a></li>
+        </ul>
+        <div class="navbarInfo">
+          <h3><a href="#">+48 58 506 65 65</a></h3>
+          <button class="btn navBtnLight formentorBtn">Zapytaj o ofertę</button>
+          <button class="btn navBtnDark">Umów jazdę testową</button>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <main class="hero">
+        <div class="heroTextContainer wrapper">
+          <aside class="heroText">
+            <h3 class="infoColorW">CUPRA Formentor</h3>
+            <h1 class="mainColorW">
+              Wejdź do świata Cupra. Poznaj prawdziwą moc i sportowego ducha
+              marki.
+            </h1>
+            <button class="btn btnLight formentorBtn">
+              Ruszaj na jazdę testową
+            </button>
+          </aside>
+        </div>
+      </main>
+      <section class="infoSection">
+        <div class="infoSectionContainer wrapper">
+          <div class="infoTop infoWidth">
+            <h2 class="mainColorW">WYPRÓBUJ</h2>
+            <p class="infoColorW infoP">
+              Zobacz, poczuj i przekonaj się, czym jest CUPRA. Poznaj samochody,
+              które są wyjątkowym połączeniem technologii, mocy, elegancji i
+              komfortu.
+            </p>
+          </div>
+          <div class="InfoSectionImgContainer">
+            <div class="formentorFront">
+              <img
+                src="assets/img/formentor-front.png"
+                alt="Cupra Formentor front-view"
+              />
+              <p class="infoColorW infoSectionP">
+                Design inspirowany wyścigami, stworzony z niezwykłą dbałością o
+                detale.
+              </p>
+            </div>
+            <div class="formentorSide">
+              <img
+                src="assets/img/formentor-side.png"
+                alt="Cupra Formentor side-view"
+              />
+              <p class="infoColorW infoSectionP">
+                Podróżuj z rozmachem bez kompromisów.
+              </p>
+            </div>
+            <div class="infoBottm">
+              <h3 class="mainColorW">TYLKO DLA ODWAŻNYCH</h3>
+              <p class="infoColorW infoP infoWidth">
+                Model CUPRA, który idealnie wpisuje się w DNA marki. Unikalny
+                SUV coupé, wyjątkowy, odważny i innowacyjny - zapewni Ci to, co
+                najlepsze w marce CUPRA.
+              </p>
+              <button class="btn btnLight formentorBtn">
+                Umów jazdę próbną
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="caruselContainer">
+        <div class="arrowsContainer">
+          <button class="prev btn" id="prev">
+            <img src="assets/icons/arrow-left.svg" alt="" />
+          </button>
+          <button class="next btn" id="next">
+            <img src="assets/icons/arrow-right.svg" alt="" />
+          </button>
+        </div>
+        <div class="itemContainer wrapper"></div>
+        <button class="btn navBtnDark" id="caruselBtn">
+          Umów jazdę próbną
+        </button>
+      </section>
+    </div>
+  </body>
+</html>

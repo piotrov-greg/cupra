@@ -1,0 +1,124 @@
+const carList = [
+  {
+    title: "CUPRA Formentor",
+    img: "assets/cars/formentor-x2.png",
+    info: "Maksymalna prędkość: 204 KM/H Moc silnika: 150 KM",
+    netto: "1439 zł",
+    brutto: "127 800 zł",
+  },
+  {
+    title: "CUPRA Formentor VZ",
+    img: "assets/cars/formentor-vz-x2.png",
+    info: "Maksymalna prędkość: 250 KM/H Moc silnika: 310 KM",
+    netto: "1533 zł",
+    brutto: "152 400 zł",
+  },
+  {
+    title: "CUPRA Ateca",
+    img: "assets/cars/ateca-x2.png",
+    info: "Maksymalna prędkość: 247 KM/H Moc silnika: 300 KM",
+    netto: "2334 zł",
+    brutto: "220 700 zł",
+  },
+  {
+    title: "CUPRA Born",
+    img: "assets/cars/born-x2.png",
+    info: "Akumulator 58 kWh moc do 204 KM²",
+    netto: "1943 zł",
+    brutto: "179 600 zł",
+  },
+  {
+    title: "Leon",
+    img: "assets/cars/leon-x2.png",
+    info: "Maksymalna prędkość: 245 KM/H Moc silnika: 300 KM",
+    netto: "1553 zł",
+    brutto: "152 400 zł",
+  },
+  {
+    title: "Leon Sportstourer",
+    img: "assets/cars/sportstourer-x2.png",
+    info: "Maksymalna prędkość: 250 KM/H Moc silnika: 310 KM",
+    netto: "1601 zł",
+    brutto: "156 200 zł",
+  },
+];
+const itemContainer = document.querySelector(".itemContainer");
+function createCaruselItems(carList) {
+  carList.forEach((car) => {
+    const caruselItem = document.createElement("div");
+    caruselItem.classList.add("caruselItem");
+
+    const title = document.createElement("h2");
+    title.classList.add("caruselItemTitle");
+    title.textContent = car.title;
+
+    const image = document.createElement("img");
+    image.classList.add("caruselImg");
+    image.src = car.img;
+    image.alt = "";
+
+    const info = document.createElement("p");
+    info.classList.add("caruselItemInfo");
+    info.textContent = car.info;
+
+    const pricingContainer = document.createElement("div");
+    pricingContainer.classList.add("pricingContainer");
+
+    const leasingInfo = document.createElement("p");
+    leasingInfo.classList.add("pricingItem");
+    leasingInfo.textContent = "Dostępny w leasingu z 0% opłaty własnej";
+
+    const nettoPrice = document.createElement("p");
+    nettoPrice.classList.add("pricingItem");
+    nettoPrice.textContent = `Rata netto/mies. od*`;
+    const nettoSpan = document.createElement("span");
+    nettoSpan.classList.add("price");
+    nettoSpan.textContent = car.netto;
+    nettoPrice.appendChild(nettoSpan);
+
+    const bruttoPrice = document.createElement("p");
+    bruttoPrice.classList.add("pricingItem");
+    bruttoPrice.textContent = `Rata brutto już od`;
+    const bruttoSpan = document.createElement("span");
+    bruttoSpan.classList.add("price");
+    bruttoSpan.textContent = car.brutto;
+    bruttoPrice.appendChild(bruttoSpan);
+
+    caruselItem.appendChild(title);
+    caruselItem.appendChild(image);
+    caruselItem.appendChild(info);
+    pricingContainer.appendChild(leasingInfo);
+    pricingContainer.appendChild(nettoPrice);
+    pricingContainer.appendChild(bruttoPrice);
+    caruselItem.appendChild(pricingContainer);
+
+    itemContainer.appendChild(caruselItem);
+  });
+}
+
+createCaruselItems(carList);
+
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+
+let index = 0;
+
+function changeCar() {
+  if (index > carList.length - 1) {
+    index = 0;
+  } else if (index < 0) {
+    index = carList.length - 1;
+  }
+
+  itemContainer.style.transform = `translateX(${-index * 827}px)`;
+}
+
+next.addEventListener("click", () => {
+  index++;
+  changeCar();
+});
+
+prev.addEventListener("click", () => {
+  index--;
+  changeCar();
+});
