@@ -13,16 +13,21 @@
     <header>
       <nav class="navbar">
         <a href="#"><img src="assets/icons/logo.png" alt="Cupra logo" /></a>
-        <ul class="navbarMenu">
-          <li><a href="#">Samochody</a></li>
-          <li><a href="#">Jazda Próbna</a></li>
-          <li><a href="#">Oferta</a></li>
-          <li><a href="#">Salon Cupra</a></li>
-        </ul>
-        <div class="navbarInfo">
-          <h3><a href="#">+48 58 506 65 65</a></h3>
-          <button class="btn navBtnLight formentorBtn">Zapytaj o ofertę</button>
-          <button class="btn navBtnDark">Umów jazdę testową</button>
+        <div class="navMobileWraper">
+          <ul class="navbarMenu">
+            <li><a href="#">Samochody</a></li>
+            <li><a href="#">Jazda Próbna</a></li>
+            <li><a href="#">Oferta</a></li>
+            <li><a href="#">Salon Cupra</a></li>
+          </ul>
+          <div class="navbarInfo">
+            <h3><a href="#">+48 58 506 65 65</a></h3>
+            <button class="btn navBtnLight formentorBtn">
+              Zapytaj o ofertę
+            </button>
+            <button class="btn navBtnDark">Umów jazdę testową</button>
+          </div>
+          <button id="test" class="hidden">AAA</button>
         </div>
       </nav>
     </header>
@@ -99,6 +104,62 @@
           Umów jazdę próbną
         </button>
       </section>
+      <article class="infoSection">
+        <div class="articleContainer wrapper">
+          <div class="articleComponentContainer">
+            <div class="articleComponent">
+              <img
+                class="articleImg"
+                src="assets/img/formentor-interior.jpg"
+                alt="inside"
+              />
+              <div class="articleCmpTextContainer">
+                <h3 class="upperText">Technologia</h3>
+                <p class="mainText">
+                  Poczuj pełną wolność jazdy dzięki licznym innowacjom.
+                </p>
+                <button class="btn btnLight formentorBtn componentBtn">
+                  Umów jazdę próbną
+                </button>
+              </div>
+            </div>
+            <div class="articleComponent left">
+              <img
+                class="articleImg"
+                src="assets/img/formentor-outside.jpg"
+                alt="inside"
+              />
+              <div class="articleCmpTextContainer left">
+                <h3 class="upperText">Potęga Designu</h3>
+                <p class="mainText">
+                  Crossover emanujący gracją, dynamizmem i czystym
+                  wyrafinowaniem.
+                </p>
+                <button class="btn btnLight formentorBtn componentBtn">
+                  Umów jazdę próbną
+                </button>
+              </div>
+            </div>
+            <div class="articleComponent">
+              <img
+                class="articleImg"
+                src="assets/img/formentor-seats.jpg"
+                alt="inside"
+              />
+              <div class="articleCmpTextContainer">
+                <h3 class="upperText">Design wnętrza</h3>
+                <p class="mainText">
+                  Idealny komfort. Unikalny wystrój wnętrza stworzony w stylu
+                  CUPRY.
+                </p>
+                <button class="btn btnLight formentorBtn componentBtn">
+                  Umów jazdę próbną
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </body>
 </html>

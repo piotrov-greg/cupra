@@ -34,8 +34,18 @@ body {
 header {
   background-color: var(--bg-color-light);
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
 }
 
+.hidden {
+  display: none;
+}
+.mobile {
+  flex-direction: column;
+  align-items: center;
+}
 .wrapper {
   width: 100%;
   max-width: 1372px;
@@ -46,15 +56,21 @@ header,
 .navbar,
 .navbarMenu,
 .navbarInfo,
-.container {
+.container,
+.navMobileWraper {
   display: flex;
+}
+
+.navMobileWraper {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .navbar {
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
   max-width: 1372px;
+  width: 100%;
   margin: 0 2rem;
   padding: 18px 0;
 }
@@ -62,6 +78,7 @@ header,
 .navbarMenu {
   list-style-type: none;
   gap: 2rem;
+  margin-left: 4em;
 }
 a {
   color: var(--nav-li-items-color);
@@ -258,10 +275,6 @@ a:hover {
   background-color: var(--btn-color-hover);
 }
 
-.caruselItem.active {
-  opacity: 1;
-}
-
 .caruselItem {
   margin: 6.5rem 0 0 0;
   display: flex;
@@ -270,8 +283,6 @@ a:hover {
   align-items: center;
   max-width: 667px;
   width: 100%;
-  opacity: 1;
-  transition: opacity transform 0.6s ease;
 }
 
 .caruselItemTitle {
@@ -295,6 +306,7 @@ a:hover {
   display: flex;
   width: 100%;
   max-width: 516px;
+
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
@@ -319,14 +331,67 @@ a:hover {
 
 .itemContainer {
   display: flex;
-  max-width: 667px;
-  width: 100%;
+  width: 667px;
   gap: 160px;
   transform: translateX(0px);
   transition: transform 0.5s ease-in-out;
 }
 
-@media (min-width: 1000px) {
+.articleComponentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleComponent {
+  display: flex;
+  justify-content: center;
+  margin: 156px 0 156px 0;
+}
+
+.articleComponent.left {
+  flex-direction: row-reverse;
+  margin: 0;
+}
+
+.articleCmpTextContainer {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--bg-color-dark);
+  padding-left: 3em;
+  height: 100%;
+  z-index: 5;
+  position: relative;
+  right: 5em;
+  font-weight: 300;
+  color: var(--btn-color-hover);
+}
+
+.articleCmpTextContainer.left {
+  right: 0em;
+  left: 5em;
+}
+
+.articleImg {
+  width: 100%;
+  max-width: 787px;
+}
+
+.upperText {
+  font-size: 1rem;
+  margin: 0 0 0.5em 0;
+}
+
+.componentBtn {
+  margin: 3rem 0 3rem 0;
+}
+
+.mainText {
+  font-size: 2rem;
+  margin: 0;
+}
+/* ----------------------------- */
+
+@media (min-width: 1010px) {
   .InfoSectionImgContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -344,5 +409,25 @@ a:hover {
 
   .formentorSide {
     margin-top: 3.75rem;
+  }
+}
+@media (max-width: 540px) {
+  .pricingContainer {
+    width: 316px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .articleComponent,
+  .articleComponent.left {
+    flex-direction: column;
+    align-items: center;
+    margin: 3em 0 0 0;
+  }
+  .articleCmpTextContainer,
+  .articleCmpTextContainer.left {
+    margin-top: 2em;
+    right: 0em;
+    left: 0em;
   }
 }

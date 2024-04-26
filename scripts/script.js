@@ -70,7 +70,7 @@ function createCaruselItems(carList) {
 
     const nettoPrice = document.createElement("p");
     nettoPrice.classList.add("pricingItem");
-    nettoPrice.textContent = `Rata netto/mies. od*`;
+    nettoPrice.textContent = `Rata netto/mies. od* `;
     const nettoSpan = document.createElement("span");
     nettoSpan.classList.add("price");
     nettoSpan.textContent = car.netto;
@@ -78,7 +78,7 @@ function createCaruselItems(carList) {
 
     const bruttoPrice = document.createElement("p");
     bruttoPrice.classList.add("pricingItem");
-    bruttoPrice.textContent = `Rata brutto już od`;
+    bruttoPrice.textContent = `Rata brutto już od `;
     const bruttoSpan = document.createElement("span");
     bruttoSpan.classList.add("price");
     bruttoSpan.textContent = car.brutto;
