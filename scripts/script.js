@@ -169,6 +169,11 @@ function scrollToSection(selector) {
   }
 }
 
+const carsSection = document.querySelector(".carsScroll");
+carsSection.addEventListener("click", () => {
+  scrollToSection(".caruselContainer");
+});
+
 const carCardListItems = document.getElementById("carCardListItems");
 const mainDropdown = document.getElementById("dropDownCars");
 
