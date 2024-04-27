@@ -444,6 +444,7 @@ a:hover,
 .formInputContainer {
   width: 100%;
   max-width: 553px;
+  margin-top: 2rem;
 }
 
 .formItem {
@@ -546,6 +547,40 @@ footer {
 
 .iconsContainer img {
   width: 24px;
+}
+
+.dropdown {
+  width: 553px;
+}
+
+.selectDropdown {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  border: 2px dotted var(--btn-color);
+  padding: 1rem 1rem 1rem 0;
+}
+.carCardName {
+  font-weight: 400;
+  transform: translateX(-80px);
+}
+
+.carCardImg {
+  width: 100%;
+  max-width: 306px;
+  transform: translateX(-60px);
+}
+
+.selectMenu {
+  list-style: none;
+  width: 553px;
+  padding: 0;
 }
 /* ----------------------------- */
 

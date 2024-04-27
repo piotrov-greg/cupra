@@ -204,7 +204,22 @@
             <h3 class="upperText dark">Jazda próbna</h3>
             <p class="mainText dark">Umów się na bezpłatną jazdę próbną</p>
           </div>
-          <div class="selectCarContainer"></div>
+          <div class="selectCarContainer">
+            <div class="dropdown">
+              <div class="selectDropdown mainDropdown" id="dropDownCars">
+                <div class="carCard">
+                  <img
+                    class="carCardImg"
+                    src="assets/cars/formentor-x2.png"
+                    alt=""
+                  />
+                  <p class="carCardName">Cupra Formentor</p>
+                  <i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <ul class="selectMenu hidden" id="carCardListItems"></ul>
+            </div>
+          </div>
           <div class="formInputContainer">
             <div class="formItem name">
               <label class="formItemText" for="name">Imię *</label>

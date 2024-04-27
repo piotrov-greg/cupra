@@ -165,7 +165,53 @@ for (i = 0; i < btnScroll.length; i++) {
 function scrollToSection(selector) {
   const section = document.querySelector(selector);
   if (section) {
-    // Wykorzystujemy smooth scrolling, aby płynnie przewinąć stronę do sekcji
     section.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+const carCardListItems = document.getElementById("carCardListItems");
+const mainDropdown = document.getElementById("dropDownCars");
+
+mainDropdown.addEventListener("click", () => {
+  carCardListItems.classList.remove("hidden");
+});
+
+function generateCarList(carList) {
+  const selectMenu = document.querySelector(".selectMenu");
+
+  carList.forEach((car) => {
+    const menuItem = document.createElement("li");
+    menuItem.classList.add("menuItem");
+
+    const selectDropdown = document.createElement("div");
+    selectDropdown.classList.add("selectDropdown");
+
+    const carCard = document.createElement("div");
+    carCard.classList.add("carCard");
+
+    const carImg = document.createElement("img");
+    carImg.classList.add("carCardImg");
+    carImg.src = car.img;
+    carImg.alt = "";
+
+    const carName = document.createElement("p");
+    carName.classList.add("carCardName");
+    carName.textContent = car.title;
+
+    carCard.appendChild(carImg);
+    carCard.appendChild(carName);
+    selectDropdown.appendChild(carCard);
+    menuItem.appendChild(selectDropdown);
+    selectMenu.appendChild(menuItem);
+
+    menuItem.addEventListener("click", function () {
+      mainDropdown.querySelector(".carCardImg").src = car.img;
+      mainDropdown.querySelector(".carCardName").textContent = car.title;
+      carCardListItems.classList.add("hidden");
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  generateCarList(carList);
+});
