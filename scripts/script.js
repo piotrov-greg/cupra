@@ -145,3 +145,27 @@ barsBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   navBarMobile.classList.add("hidden");
 });
+
+function changeImageSource(imageId, newSource) {
+  document.getElementById(imageId).src = newSource;
+}
+
+function restoreImageSource(imageId, originalSource) {
+  document.getElementById(imageId).src = originalSource;
+}
+
+const btnScroll = document.querySelectorAll(".testDrive");
+
+for (i = 0; i < btnScroll.length; i++) {
+  btnScroll[i].addEventListener("click", function () {
+    scrollToSection(".formSection");
+  });
+}
+
+function scrollToSection(selector) {
+  const section = document.querySelector(selector);
+  if (section) {
+    // Wykorzystujemy smooth scrolling, aby płynnie przewinąć stronę do sekcji
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}

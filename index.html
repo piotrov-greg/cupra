@@ -21,17 +21,17 @@
         /></a>
         <div class="navMobileWraper">
           <ul class="navbarMenu">
-            <li><a href="#">Samochody</a></li>
-            <li><a href="#">Jazda Próbna</a></li>
-            <li><a href="#">Oferta</a></li>
-            <li><a href="#">Salon Cupra</a></li>
+            <li><p class="cars">Samochody</p></li>
+            <li><p class="testDrive">Jazda Próbna</p></li>
+            <li><p>Oferta</p></li>
+            <li><p>Salon Cupra</p></li>
           </ul>
           <div class="navbarInfo">
             <h3><a href="#">+48 58 506 65 65</a></h3>
-            <button class="btn navBtnLight formentorBtn">
+            <button class="btn navBtnLight formentorBtn testDrive">
               Zapytaj o ofertę
             </button>
-            <button class="btn navBtnDark">Umów jazdę testową</button>
+            <button class="btn navBtnDark testDrive">Umów jazdę testową</button>
           </div>
         </div>
         <button id="openNav" class="btn navBtnLight">
@@ -42,8 +42,8 @@
             <button id="coloseNav" class="btn navBtnLight">
               <i class="fa-solid fa-xmark"></i>
             </button>
-            <li><a href="#">Samochody</a></li>
-            <li><a href="#">Jazda Próbna</a></li>
+            <li><a class="cars" href="#">Samochody</a></li>
+            <li><a class="testDrive" href="#">Jazda Próbna</a></li>
             <li><a href="#">Oferta</a></li>
             <li><a href="#">Salon Cupra</a></li>
             <li>
@@ -54,7 +54,11 @@
                 Zapytaj o ofertę
               </button>
             </li>
-            <li><button class="btn navBtnDark">Umów jazdę testową</button></li>
+            <li>
+              <button class="btn navBtnDark testDrive">
+                Umów jazdę testową
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
@@ -68,7 +72,7 @@
               Wejdź do świata Cupra. Poznaj prawdziwą moc i sportowego ducha
               marki.
             </h1>
-            <button class="btn btnLight formentorBtn">
+            <button class="btn btnLight formentorBtn testDrive">
               Ruszaj na jazdę testową
             </button>
           </aside>
@@ -111,7 +115,7 @@
                 SUV coupé, wyjątkowy, odważny i innowacyjny - zapewni Ci to, co
                 najlepsze w marce CUPRA.
               </p>
-              <button class="btn btnLight formentorBtn">
+              <button class="btn btnLight formentorBtn testDrive">
                 Umów jazdę próbną
               </button>
             </div>
@@ -128,7 +132,7 @@
           </button>
         </div>
         <div class="itemContainer wrapper"></div>
-        <button class="btn navBtnDark" id="caruselBtn">
+        <button class="btn navBtnDark testDrive" id="caruselBtn">
           Umów jazdę próbną
         </button>
       </section>
@@ -146,7 +150,9 @@
                 <p class="mainText">
                   Poczuj pełną wolność jazdy dzięki licznym innowacjom.
                 </p>
-                <button class="btn btnLight formentorBtn componentBtn">
+                <button
+                  class="btn btnLight formentorBtn componentBtn testDrive"
+                >
                   Umów jazdę próbną
                 </button>
               </div>
@@ -163,7 +169,9 @@
                   Crossover emanujący gracją, dynamizmem i czystym
                   wyrafinowaniem.
                 </p>
-                <button class="btn btnLight formentorBtn componentBtn">
+                <button
+                  class="btn btnLight formentorBtn componentBtn testDrive"
+                >
                   Umów jazdę próbną
                 </button>
               </div>
@@ -180,7 +188,9 @@
                   Idealny komfort. Unikalny wystrój wnętrza stworzony w stylu
                   CUPRY.
                 </p>
-                <button class="btn btnLight formentorBtn componentBtn">
+                <button
+                  class="btn btnLight formentorBtn componentBtn testDrive"
+                >
                   Umów jazdę próbną
                 </button>
               </div>
@@ -223,7 +233,89 @@
             <p class="formAlertInfo">* Pole wymagane</p>
           </div>
         </div>
+        <div class="faqContainer">
+          <p class="faqText">
+            Wysłanie uzupełnionego formularza oznacza Twoją zgodę na kontakt w
+            celu przedstawienia informacji handlowej w wybrany przez Ciebie
+            sposób w związku <span class="readMore">Czytaj więcej</span>
+          </p>
+          <p class="faqText">
+            Prosimy Cię też o wyrażenie poniższych zgód w celu możliwości
+            przedstawiania Ci atrakcyjnych ofert / promocji produktów,
+            akcesoriów i usług marki CUPRA w przyszłości.
+          </p>
+          <ul class="faqCheckboxContainer">
+            <li class="checkboxItem">
+              <input class="checkbox" type="checkbox" name="checkbox" />
+              <p>
+                Zgadzam się na przetwarzanie moich danych osobowych przez
+                Plichta spółka z ograniczoną odpowiedzialnością Spółka
+                Komandytowa w celu przedstawienia mi informacji marketingowych i
+                handlowych dotyczących produktów i usług marki CUPRA oraz innych
+                powiązanych z marką CUPRA akcesoriów, produktów i usług
+                motoryzacyjnych za pomocą:
+              </p>
+            </li>
+            <li class="checkboxItem">
+              <input class="checkbox" type="checkbox" name="checkbox" />
+              <p>E-mail</p>
+            </li>
+            <li class="checkboxItem">
+              <input class="checkbox" type="checkbox" name="checkbox" />
+              <p>Telefon</p>
+            </li>
+            <li class="checkboxItem">
+              <input class="checkbox" type="checkbox" name="checkbox" />
+              <p>Wiadomości SMS/MMS</p>
+            </li>
+          </ul>
+          <p class="faqText">
+            Masz prawo do wglądu, modyfikacji, ograniczenia przetwarzania i
+            usunięcia swoich danych oraz do wycofania w każdym momencie swojej
+            zgody.
+          </p>
+          <p class="faqText">
+            Twoje dane będą przetwarzane tylko w stopniu umożliwiającym
+            realizację wymienionego celu.
+          </p>
+          <p class="faqText">
+            Administratorem Twoich danych jest Plichta spółka z ograniczoną
+            odpowiedzialnością Spółka Komandytowa, z siedzibą w Wejherowie przy
+            ulicy Gdańskiej 13c. Zapraszamy do zapoznania się z naszą polityką
+            prywatności umieszczoną pod linkiem:
+            https://www.plichta.com.pl/polityka-prywatnosci
+          </p>
+        </div>
+        <button class="btn navBtnDark" id="btnCheck">Umów jazdę próbną</button>
       </div>
     </div>
+    <footer>
+      <div class="footerContainer wrapper">
+        <p class="footerText">SEAT CUPRA S.A.U. 2022 ®</p>
+        <ul class="footerMenu">
+          <li><a href="#">Obowiązek informacyjny</a></li>
+          <li>|</li>
+          <li><a href="#">Polityka cookies</a></li>
+        </ul>
+        <div class="iconsContainer">
+          <img
+            id="ig"
+            src="assets/icons/ig.png"
+            alt=""
+            class="socialMediaIcon"
+            onmouseover="changeImageSource('ig', 'assets/icons/ig-hover.png')"
+            onmouseout="restoreImageSource('ig', 'assets/icons/ig.png')"
+          />
+          <img
+            id="vimeo"
+            src="assets/icons/vimeo.png"
+            alt=""
+            class="socialMediaIcon"
+            onmouseover="changeImageSource('vimeo', 'assets/icons/vimeo-hover.png')"
+            onmouseout="restoreImageSource('vimeo', 'assets/icons/vimeo.png')"
+          />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
