@@ -39,12 +39,39 @@ header {
   z-index: 20;
 }
 
+.navbarMobile.hidden {
+  display: none;
+}
+
 .hidden {
   display: none;
 }
 .mobile {
   flex-direction: column;
   align-items: center;
+}
+
+#openNav {
+  margin-left: auto;
+  display: none;
+}
+.navbarMobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--bg-color-light);
+}
+
+.navbarMenu.mobile {
+  margin: 18px 0;
 }
 .wrapper {
   width: 100%;
@@ -73,6 +100,9 @@ header,
   width: 100%;
   margin: 0 2rem;
   padding: 18px 0;
+}
+.logoCupra {
+  margin-right: auto;
 }
 
 .navbarMenu {
@@ -274,7 +304,9 @@ a:hover {
 .next {
   background-color: var(--btn-color-hover);
 }
-
+.caruselItem.active {
+  opacity: 1;
+}
 .caruselItem {
   margin: 6.5rem 0 0 0;
   display: flex;
@@ -283,6 +315,8 @@ a:hover {
   align-items: center;
   max-width: 667px;
   width: 100%;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
 }
 
 .caruselItemTitle {
@@ -429,5 +463,21 @@ a:hover {
     margin-top: 2em;
     right: 0em;
     left: 0em;
+  }
+}
+
+@media (min-width: 1300px) {
+  .navbarMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .navMobileWraper {
+    display: none;
+  }
+
+  #openNav {
+    display: inline-block;
   }
 }

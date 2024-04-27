@@ -110,8 +110,19 @@ function changeCar() {
     index = carList.length - 1;
   }
 
+  const caruselItems = document.querySelectorAll(".caruselItem");
+  caruselItems.forEach((item, i) => {
+    if (i === index) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+
   itemContainer.style.transform = `translateX(${-index * 827}px)`;
 }
+
+changeCar();
 
 next.addEventListener("click", () => {
   index++;
@@ -121,4 +132,16 @@ next.addEventListener("click", () => {
 prev.addEventListener("click", () => {
   index--;
   changeCar();
+});
+
+const barsBtn = document.getElementById("openNav");
+const closeBtn = document.getElementById("coloseNav");
+const navBarMobile = document.querySelector(".navbarMobile");
+
+barsBtn.addEventListener("click", () => {
+  navBarMobile.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+  navBarMobile.classList.add("hidden");
 });

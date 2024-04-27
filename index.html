@@ -7,12 +7,18 @@
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="scripts/script.js"></script>
-    <script defer src="scripts/cars.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/05771a8455.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="#"><img src="assets/icons/logo.png" alt="Cupra logo" /></a>
+        <a href="#"
+          ><img class="logoCupra" src="assets/icons/logo.png" alt="Cupra logo"
+        /></a>
         <div class="navMobileWraper">
           <ul class="navbarMenu">
             <li><a href="#">Samochody</a></li>
@@ -27,7 +33,29 @@
             </button>
             <button class="btn navBtnDark">Umów jazdę testową</button>
           </div>
-          <button id="test" class="hidden">AAA</button>
+        </div>
+        <button id="openNav" class="btn navBtnLight">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="navbarMobile hidden">
+          <ul class="navbarMenu mobile">
+            <button id="coloseNav" class="btn navBtnLight">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <li><a href="#">Samochody</a></li>
+            <li><a href="#">Jazda Próbna</a></li>
+            <li><a href="#">Oferta</a></li>
+            <li><a href="#">Salon Cupra</a></li>
+            <li>
+              <h3><a href="#">+48 58 506 65 65</a></h3>
+            </li>
+            <li>
+              <button class="btn navBtnLight formentorBtn">
+                Zapytaj o ofertę
+              </button>
+            </li>
+            <li><button class="btn navBtnDark">Umów jazdę testową</button></li>
+          </ul>
         </div>
       </nav>
     </header>
